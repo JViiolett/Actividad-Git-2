@@ -1,0 +1,145 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --darkcyan: rgb(0,139,139);
+    --gray: rgba(105, 105, 105, 0.438);
+    --gray-lighter:rgba(194, 194, 194, 0.322);
+    --font-size: calc(0.9rem + 1%);
+    --background:url("../imgs/tokio-japon-ilustracion-digital_1280x720_xtrafondos.com.jpg");
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: var(--background) center no-repeat;
+    background-size: cover;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 90%;
+    border: none;
+}
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50%;
+    color: var(--white);
+    gap: 20px;
+    padding: 35px 25px;
+    border:  none;
+    border-radius: 10px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    outline: 2px solid var(--gray);
+    box-shadow: 0 0 20px var(--black);
+}
+form aside {
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.input {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: 1px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    padding: 5px 10px;
+}
+.input::placeholder {
+    color: var(--white);
+    font-weight: lighter;
+    font-size: var(--font-size);
+}
+.input-i {
+    cursor: default;
+    position: absolute;
+    left: 80%;
+    font-size: 1.3rem;
+}
+.input-i:nth-child(2){
+    cursor: pointer;
+}
+.forgot {
+    gap: 10px;
+}
+.recordar {
+    display: flex;
+    gap: 3px;
+    accent-color: var(--darkcyan);
+    font-size: var(--font-size);
+    margin-right: calc(10px - 1%);
+}
+.btn-login {
+    cursor: pointer;
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: var(--font-size);
+    background: transparent;
+    outline: 2px solid var(--white);
+}
+.btn-login:hover {
+    background-color: var(--gray-lighter);
+}
+a {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--font-size);
+}
+a::before {
+    content: "";
+    position: absolute;
+    height: 7.5%;
+    width: 0%;
+    top: 100%;
+    left: 50%;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+a:hover::before {
+    width: 100%;
+    left: 0;
+}
+.recordar-ckeck{
+    cursor: pointer;
+}
+@media (max-width:450px) {
+    :root {
+        --font-size: calc(0.9rem - 1%);
+        --background:url("../imgs/tokio-japon-ilustracion-digital-vertical.jpg");
+    }
+    form {
+        width: 90%;
+    }
+    .input {
+        height: 25px;
+    }
+    .input-i {
+        font-size: 1.2rem;
+        left: 82%;
+    }
+}
