@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <form>
+            <h1>LOGIN</h1>
+            <aside>
+                <input type="text" class="input correo" placeholder="Email" required>
+                <span class="input-i"><i class='bx bxs-user'></i></span>
+            </aside>
+            <aside>
+                <input type="password" class="input contrasena" placeholder="Password" required>
+                <span class="input-i"><i class='bx bxs-lock i-lock'></i></span>
+            </aside>
+            <aside class="forgot">
+                <div class="recordar">
+                    <input class="recordar-ckeck" type="checkbox">
+                    <p>Remember</p>
+                </div>
+                <a class="link-olvidar-contrasena" href="#"><p>¿Forgot Password?</p></a>
+            </aside>
+            <input type="button" class="btn-login" value="Login"></input>
+            <a class="link-register" href="../register/register.html"><p>¿Don't have an account?</p></a>
+        </form>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>
